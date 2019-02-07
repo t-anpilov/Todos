@@ -18,12 +18,16 @@ class ToDoItem extends Component {
     handleOut() {
         this.setState({styles: {backgroundColor: '#FFF8DC'}});
     }
-
+    
     render() {
         return (
             <div className="list_row">
-                <p onMouseOver={this.handleOver} style={this.state.styles} onMouseOut={this.handleOut}>
-                    <input type="checkbox" checked={this.props.item.completed} />
+                <p onMouseOver={this.handleOver} 
+                    style={this.state.styles} 
+                    onMouseOut={this.handleOut}>
+                    <input type="checkbox"
+                        checked={this.props.item.completed}
+                        onChange={() => this.props.handleChange(this.props.item.id)} />
                     {this.props.item.text}
                 </p>
             </div>    
