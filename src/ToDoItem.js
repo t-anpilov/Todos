@@ -1,9 +1,9 @@
 import React from 'react';
 
-function ToDoItem() {
+function ToDoItem(props) {
     return (
         <div className="list_row">
-            <p><input type="checkbox" />case: </p>
+            <p><input type="checkbox" checked={props.item.completed} />{props.item.text}</p>
         </div>    
     )
 }
