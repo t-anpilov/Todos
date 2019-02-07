@@ -1,12 +1,20 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './app.css';
 
-function Header() {
-    return (
-        <header className="header">
-            <h1> My ToDo's page </h1>
-        </header>    
-    )
+class Header extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            userName: 'User'
+        }
+    }
+    render() { 
+        return (
+            <header className="header">
+                <h1> {this.state.userName}'s page</h1>
+            </header>    
+        );
+    }    
 }
 
 export default Header

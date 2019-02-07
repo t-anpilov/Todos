@@ -5,12 +5,15 @@ import './app.css';
 
 
 class List extends Component {
-    constructor(props){
-        super(props)
+    constructor(){
+        super();
+        this.state = {
+            todos: todosData
+        };
     }
         
     render() {
-        const todoItems = todosData.map((item) => <ToDoItem key={item.id} item={item}/>)
+        const todoItems = this.state.todos.map((item) => <ToDoItem key={item.id} item={item}/>)
         return (
             <div className="list_block">
                 {todoItems}
