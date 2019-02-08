@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './app.css';
 import Header from './Header';
+import LogIn from './LogIn';
 import List from './List';
 
 class App extends Component {
@@ -9,6 +10,7 @@ class App extends Component {
         <section className="Main">
             <Header/>
             <List/>
+            <LogIn/>
         </section>
       );
     }

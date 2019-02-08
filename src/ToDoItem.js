@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
 
-
-
 class ToDoItem extends Component {
     constructor(props){
         super(props)
@@ -22,9 +20,12 @@ class ToDoItem extends Component {
     render() {
         return (
             <div className="list_row">
-                <p onMouseOver={this.handleOver} 
+                <p 
+                    onMouseOver={this.handleOver} 
                     style={this.state.styles} 
-                    onMouseOut={this.handleOut}>
+                    onMouseOut={this.handleOut}
+                    onDoubleClick={() => this.props.handleDClick(this.props.item.id)}
+                >
                     <input type="checkbox"
                         checked={this.props.item.completed}
                         onChange={() => this.props.handleChange(this.props.item.id)} />
