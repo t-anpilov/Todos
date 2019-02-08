@@ -48,13 +48,12 @@ button{
     display: block;
     width: 14%;
     height: 160px;
-    background-color: #F0FFF0;
+    background-color: #FFF8DC;
     text-align: center;
 }
 .log_but{
     margin: 5px;
     height: 20px;
     width: 50%;
-    background-color: lightskyblue;
     font-size: 0.9rem; 
 }
